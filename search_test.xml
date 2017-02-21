@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<test-suite>
+    <test-case>
+        <name>search(5, [5])</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-array><address>ARRAY</address><value>5</value></test-array>
+            <test-value><address>LENGTH</address><value>1</value></test-value>
+            <test-value><address>NUMBER</address><value>5</value></test-value>
+            <test-value><address>RESULT</address><value>999</value></test-value>
+        </input>
+        <output>
+            <test-value condition="equals" points="5">
+              <address>RESULT</address><value>1</value>
+            </test-value>
+        </output>
+    </test-case>
+    <test-case>
+        <name>search(6, [1, 2, 3, 4, 5, 6])</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-array><address>ARRAY</address><value>1, 2, 3, 4, 5, 6</value></test-array>
+            <test-value><address>LENGTH</address><value>6</value></test-value>
+            <test-value><address>NUMBER</address><value>6</value></test-value>
+            <test-value><address>RESULT</address><value>999</value></test-value>
+        </input>
+        <output>
+            <test-value condition="equals" points="5">
+              <address>RESULT</address><value>1</value>
+            </test-value>
+        </output>
+    </test-case>
+    <test-case>
+        <name>search(1, [1, 2, 3, 4, 5, 6])</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-array><address>ARRAY</address><value>1, 2, 3, 4, 5, 6</value></test-array>
+            <test-value><address>LENGTH</address><value>6</value></test-value>
+            <test-value><address>NUMBER</address><value>1</value></test-value>
+            <test-value><address>RESULT</address><value>999</value></test-value>
+        </input>
+        <output>
+            <test-value condition="equals" points="5">
+              <address>RESULT</address><value>1</value>
+            </test-value>
+        </output>
+    </test-case>
+    <test-case>
+        <name>search(0, [1, 2, 3, 4, 5, 6])</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-array><address>ARRAY</address><value>1, 2, 3, 4, 5, 6</value></test-array>
+            <test-value><address>LENGTH</address><value>6</value></test-value>
+            <test-value><address>NUMBER</address><value>0</value></test-value>
+            <test-value><address>RESULT</address><value>999</value></test-value>
+        </input>
+        <output>
+            <test-value condition="equals" points="5">
+              <address>RESULT</address><value>0</value>
+            </test-value>
+        </output>
+    </test-case>
+    <test-case>
+        <name>search(9, [-1, 2, -3, 9, -5, 6])</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-array><address>ARRAY</address><value>-1, 2, -3, 9, -5, 6</value></test-array>
+            <test-value><address>LENGTH</address><value>6</value></test-value>
+            <test-value><address>NUMBER</address><value>9</value></test-value>
+            <test-value><address>RESULT</address><value>999</value></test-value>
+        </input>
+        <output>
+            <test-value condition="equals" points="5">
+              <address>RESULT</address><value>1</value>
+            </test-value>
+        </output>
+    </test-case>
+</test-suite>

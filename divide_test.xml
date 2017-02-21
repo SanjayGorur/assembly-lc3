@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<test-suite>
+    <test-case>
+        <name>divide(5, 3)</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>10000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-value><address>A</address><value>5</value></test-value>
+            <test-value><address>B</address><value>3</value></test-value>
+            <test-value><address>QUOTIENT</address><value>999</value></test-value>
+            <test-value><address>REMAINDER</address><value>999</value></test-value>
+        </input>
+        <output>
+            <test-value condition="equals" points="2">
+              <address>QUOTIENT</address><value>1</value>
+            </test-value>
+            <test-value condition="equals" points="3">
+              <address>REMAINDER</address><value>2</value>
+            </test-value>
+        </output>
+    </test-case>
+    <test-case>
+        <name>divide(4, 0)</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>10000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-value><address>A</address><value>4</value></test-value>
+            <test-value><address>B</address><value>0</value></test-value>
+            <test-value><address>QUOTIENT</address><value>999</value></test-value>
+            <test-value><address>REMAINDER</address><value>999</value></test-value>
+        </input>
+        <output>
+            <test-value condition="equals" points="2">
+              <address>QUOTIENT</address><value>-1</value>
+            </test-value>
+            <test-value condition="equals" points="3">
+              <address>REMAINDER</address><value>0</value>
+            </test-value>
+        </output>
+    </test-case>
+    <test-case>
+        <name>divide(391, 19)</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>10000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-value><address>A</address><value>391</value></test-value>
+            <test-value><address>B</address><value>19</value></test-value>
+            <test-value><address>QUOTIENT</address><value>999</value></test-value>
+            <test-value><address>REMAINDER</address><value>999</value></test-value>
+        </input>
+        <output>
+            <test-value condition="equals" points="2">
+              <address>QUOTIENT</address><value>20</value>
+            </test-value>
+            <test-value condition="equals" points="3">
+              <address>REMAINDER</address><value>11</value>
+            </test-value>
+        </output>
+    </test-case>
+    <test-case>
+        <name>divide(10, 21)</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>10000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-value><address>A</address><value>10</value></test-value>
+            <test-value><address>B</address><value>21</value></test-value>
+            <test-value><address>QUOTIENT</address><value>999</value></test-value>
+            <test-value><address>REMAINDER</address><value>999</value></test-value>
+        </input>
+        <output>
+            <test-value condition="equals" points="2">
+              <address>QUOTIENT</address><value>0</value>
+            </test-value>
+            <test-value condition="equals" points="3">
+              <address>REMAINDER</address><value>10</value>
+            </test-value>
+        </output>
+    </test-case>
+    <test-case>
+        <name>divide(5, 5)</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>10000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-value><address>A</address><value>5</value></test-value>
+            <test-value><address>B</address><value>5</value></test-value>
+            <test-value><address>QUOTIENT</address><value>999</value></test-value>
+            <test-value><address>REMAINDER</address><value>999</value></test-value>
+        </input>
+        <output>
+            <test-value condition="equals" points="2">
+              <address>QUOTIENT</address><value>1</value>
+            </test-value>
+            <test-value condition="equals" points="3">
+              <address>REMAINDER</address><value>0</value>
+            </test-value>
+        </output>
+    </test-case>
+</test-suite>
