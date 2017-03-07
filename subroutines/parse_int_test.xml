@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test-suite>
+    <test-case>
+        <name>ParseInt: 12</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-subr>
+                <name>PARSE_INT</name>
+                <stack>xF000</stack>
+                <r5>xCAFE</r5>
+                <r7>x8000</r7>
+            </test-subr>
+            <test-stdin><value>12\n</value></test-stdin>
+        </input>
+        <output>
+            <test-stdout condition="equals" points = "1"><value>12\n</value></test-stdout>
+            <test-subr>
+                <answer>12</answer>
+                <locals>12, 0</locals>
+                <calls>
+                    <call><name>PARSE_DECIMAL</name><params>0, 49</params></call>
+                    <call><name>PARSE_DECIMAL</name><params>1, 50</params></call>
+                    <call><name>PARSE_DECIMAL</name><params>12, 10</params></call>
+                </calls>
+                <points>
+                    <answer>1</answer>
+                    <params>1</params>
+                    <r7>1</r7>
+                    <r6>1</r6>
+                    <r5>1</r5>
+                    <locals>1</locals>
+                    <calls>1</calls>
+                    <read-answer>1</read-answer>
+                </points>
+                <deductions-per-mistake>1</deductions-per-mistake>
+            </test-subr>
+        </output>
+    </test-case>
+    <test-case>
+        <name>ParseInt: x01234</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-subr>
+                <name>PARSE_INT</name>
+                <stack>xF000</stack>
+                <r5>xCAFE</r5>
+                <r7>x8000</r7>
+            </test-subr>
+            <test-stdin><value>x01234\n</value></test-stdin>
+        </input>
+        <output>
+        	<test-stdout condition="equals" points = "1"><value>x01234\n</value></test-stdout>
+            <test-subr>
+                <answer>x1234</answer>
+                <locals>x1234, 1</locals>
+                <calls>
+                    <call><name>PARSE_HEX</name><params>x0, 48</params></call>
+                    <call><name>PARSE_HEX</name><params>x0, 49</params></call>
+                    <call><name>PARSE_HEX</name><params>x1, 50</params></call>
+                    <call><name>PARSE_HEX</name><params>x12, 51</params></call>
+                    <call><name>PARSE_HEX</name><params>x123, 52</params></call>
+                    <call><name>PARSE_HEX</name><params>x1234, 10</params></call>
+                </calls>
+                <points>
+                    <answer>1</answer>
+                    <params>1</params>
+                    <r7>1</r7>
+                    <r6>1</r6>
+                    <r5>1</r5>
+                    <locals>1</locals>
+                    <calls>1</calls>
+                    <read-answer>1</read-answer>
+                </points>
+                <deductions-per-mistake>1</deductions-per-mistake>
+            </test-subr>
+        </output>
+    </test-case>
+    <test-case>
+        <name>ParseInt: 4T12</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-subr>
+                <name>PARSE_INT</name>
+                <stack>xF000</stack>
+                <r5>xCAFE</r5>
+                <r7>x8000</r7>
+            </test-subr>
+            <test-stdin><value>4T12</value></test-stdin>
+        </input>
+        <output>
+        	<test-stdout condition="equals" points = "1"><value>4T</value></test-stdout>
+            <test-subr>
+                <answer>4</answer>
+                <locals>4, 0</locals>
+                <calls>
+                    <call><name>PARSE_DECIMAL</name><params>0, 52</params></call>
+                    <call><name>PARSE_DECIMAL</name><params>4, 84</params></call>
+                </calls>
+                <points>
+                    <answer>1</answer>
+                    <params>1</params>
+                    <r7>1</r7>
+                    <r6>1</r6>
+                    <r5>1</r5>
+                    <locals>1</locals>
+                    <calls>1</calls>
+                    <read-answer>1</read-answer>
+                </points>
+                <deductions-per-mistake>1</deductions-per-mistake>
+            </test-subr>
+        </output>
+    </test-case>
+    <test-case>
+        <name>ParseInt: T</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-subr>
+                <name>PARSE_INT</name>
+                <stack>xF000</stack>
+                <r5>xCAFE</r5>
+                <r7>x8000</r7>
+            </test-subr>
+            <test-stdin><value>T</value></test-stdin>
+        </input>
+        <output>
+        	<test-stdout condition="equals" points = "1"><value>T</value></test-stdout>
+            <test-subr>
+                <answer>0</answer>
+                <locals>0, 0</locals>
+                <calls>
+                    <call><name>PARSE_DECIMAL</name><params>0, 84</params></call>
+                </calls>
+                <points>
+                    <answer>1</answer>
+                    <params>1</params>
+                    <r7>1</r7>
+                    <r6>1</r6>
+                    <r5>1</r5>
+                    <locals>1</locals>
+                    <calls>1</calls>
+                    <read-answer>1</read-answer>
+                </points>
+                <deductions-per-mistake>1</deductions-per-mistake>
+            </test-subr>
+        </output>
+    </test-case>
+    <test-case>
+        <name>ParseInt: xFG</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-subr>
+                <name>PARSE_INT</name>
+                <stack>xF000</stack>
+                <r5>xCAFE</r5>
+                <r7>x8000</r7>
+            </test-subr>
+            <test-stdin><value>xFG</value></test-stdin>
+        </input>
+        <output>
+        	<test-stdout condition="equals" points = "1"><value>xFG</value></test-stdout>
+            <test-subr>
+                <answer>xF</answer>
+                <locals>xF, 1</locals>
+                <calls>
+                    <call><name>PARSE_HEX</name><params>x0, 70</params></call>
+                    <call><name>PARSE_HEX</name><params>xF, 71</params></call>
+                </calls>
+                <points>
+                    <answer>1</answer>
+                    <params>1</params>
+                    <r7>1</r7>
+                    <r6>1</r6>
+                    <r5>1</r5>
+                    <locals>1</locals>
+                    <calls>1</calls>
+                    <read-answer>1</read-answer>
+                </points>
+                <deductions-per-mistake>1</deductions-per-mistake>
+            </test-subr>
+        </output>
+    </test-case>
+    <test-case>
+        <name>ParseInt: xG</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-subr>
+                <name>PARSE_INT</name>
+                <stack>xF000</stack>
+                <r5>xCAFE</r5>
+                <r7>x8000</r7>
+            </test-subr>
+            <test-stdin><value>xG</value></test-stdin>
+        </input>
+        <output>
+        	<test-stdout condition="equals" points = "1"><value>xG</value></test-stdout>
+            <test-subr>
+                <answer>0</answer>
+                <locals>0, 1</locals>
+                <calls>
+                    <call><name>PARSE_HEX</name><params>x0, 71</params></call>
+                </calls>
+                <points>
+                    <answer>1</answer>
+                    <params>1</params>
+                    <r7>1</r7>
+                    <r6>1</r6>
+                    <r5>1</r5>
+                    <locals>1</locals>
+                    <calls>1</calls>
+                    <read-answer>1</read-answer>
+                </points>
+                <deductions-per-mistake>1</deductions-per-mistake>
+            </test-subr>
+        </output>
+    </test-case>
+</test-suite>

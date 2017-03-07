@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test-suite>
+    <test-case>
+        <name>ParseHex(x34, 'F')</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-subr>
+                <name>PARSE_HEX</name>
+                <stack>xF000</stack>
+                <r5>xCAFE</r5>
+                <r7>x8000</r7>
+                <params>x34, 70</params>
+            </test-subr>
+        </input>
+        <output>
+            <test-subr>
+                <answer>x34F</answer>
+                <calls>
+                    <call><name>MULT</name><params>x34, 16</params></call>
+                </calls>
+                <points>
+                    <answer>1</answer>
+                    <params>1</params>
+                    <r7>1</r7>
+                    <r6>1</r6>
+                    <r5>1</r5>
+                    <calls>1</calls>
+                    <read-answer>1</read-answer>
+                </points>
+                <deductions-per-mistake>1</deductions-per-mistake>
+            </test-subr>
+        </output>
+    </test-case>
+    <test-case>
+        <name>ParseHex(x50, 'Z')</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-subr>
+                <name>PARSE_HEX</name>
+                <stack>xF000</stack>
+                <r5>xCAFE</r5>
+                <r7>x8000</r7>
+                <params>x50, 90</params>
+            </test-subr>
+        </input>
+        <output>
+            <test-subr>
+                <answer>-1</answer>
+				<calls>
+                    <call required="0"><name>MULT</name><params>x50, 16</params></call>
+                </calls>
+                <points>
+                    <answer>1</answer>
+                    <params>1</params>
+                    <r7>1</r7>
+                    <r6>1</r6>
+                    <r5>1</r5>
+					<calls>1</calls>
+					<read-answer>1</read-answer>
+                </points>
+                <deductions-per-mistake>1</deductions-per-mistake>
+            </test-subr>
+        </output>
+    </test-case>
+    <test-case>
+        <name>ParseHex(x123, '4')</name>
+        <has-max-executions>1</has-max-executions>
+        <max-executions>1000000</max-executions>
+        <randomize>1</randomize>
+        <input>
+            <test-subr>
+                <name>PARSE_HEX</name>
+                <stack>xF000</stack>
+                <r5>xCAFE</r5>
+                <r7>x8000</r7>
+                <params>x123, 52</params>
+            </test-subr>
+        </input>
+        <output>
+            <test-subr>
+                <answer>x1234</answer>
+                <calls>
+                    <call><name>MULT</name><params>x123, 16</params></call>
+                </calls>
+                <points>
+                    <answer>1</answer>
+                    <params>1</params>
+                    <r7>1</r7>
+                    <r6>1</r6>
+                    <r5>1</r5>
+                    <calls>1</calls>
+                    <read-answer>1</read-answer>
+                </points>
+                <deductions-per-mistake>1</deductions-per-mistake>
+            </test-subr>
+        </output>
+    </test-case>
+</test-suite>
