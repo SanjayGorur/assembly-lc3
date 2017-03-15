@@ -1,7 +1,7 @@
 ;;===============================
 ;; Name: Carina Claassen
 ;;===============================
-;; Write a program that sorts an array in ascending order.
+;; This program sorts an array in ascending order.
 
 
 .orig x3000

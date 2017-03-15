@@ -1,7 +1,7 @@
 ;;===============================
 ;; Name: Carina Claassen
 ;;===============================
-;; Write a program to search for a certain value in an array.
+;; This program searches for a certain value in an array.
 
 
 .orig x3000

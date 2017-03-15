@@ -1,18 +1,10 @@
 ;;===============================
-;; CS 2110 Spring 2017
-;; Homework 7 - Functions
 ;; Name: Carina Claassen
 ;;===============================
+   This function parses an int (either in decimal or hex) input as characters to the computer.
 
 .orig x3000
     LD R6, STACK
-
-    ; You can test your functions individually here
-    ; Alternatively, if you are confident in your own code,
-    ; you can run the tester directly without anything here
-
-    ; This part has been done for you
-    ; When ParseInt is ready, you can uncomment the below lines
 
     JSR PARSE_INT   ; call PARSE_INT with no arguments
     LDR R0, R6, 0   ; load return value
@@ -30,7 +22,7 @@ STACK               .fill xF000
 
 PARSE_INT
 
-    ; GETC stores in R0, so do not use it for other variables!
+    ; Note: GETC stores in R0, so using it for other variables may overwrite those variables
 
     ADD R6, R6, -3      ; allocate return value, return address, and old frame pointer
     STR R7, R6, 1       ; store return address (R7) on stack

@@ -1,10 +1,9 @@
 ;;===============================
-;; CS 2110 Spring 2017
-;; Homework 7 - Functions
 ;; Name: Carina Claassen
 ;;===============================
+  This program calculates the gcd (greatest common denominator) of two integers.
 
-; DO NOT REMOVE THIS LINE
+
 ;@plugin filename=lc3_udiv vector=x80
 
 .orig x3000

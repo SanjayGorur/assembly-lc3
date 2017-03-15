@@ -1,7 +1,7 @@
 ;;===============================
 ;; Name: Carina Claassen
 ;;===============================
-;; Write a program that divides two non-negative numbers A and B.
+;; This program divides two non-negative numbers A and B.
 
 
 .orig x3000

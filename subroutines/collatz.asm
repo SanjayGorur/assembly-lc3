@@ -1,10 +1,9 @@
 ;;===============================
-;; CS 2110 Spring 2017
-;; Homework 7 - Functions
 ;; Name: Carina Claassen
 ;;===============================
+  This is a recursive function with input n that returns n/2 if n is even and 3n+1 if n is odd. base case: return 0 when n is 1.
 
-; DO NOT REMOVE THIS LINE
+
 ;@plugin filename=lc3_udiv vector=x80
 
 .orig x3000

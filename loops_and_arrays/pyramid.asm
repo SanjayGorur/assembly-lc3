@@ -1,7 +1,7 @@
 ;;===============================
 ;; Name: Carina Claassen
 ;;===============================
-;; Write a program to print out a pyramid to the console.
+;; This program prints out a pyramid to the console.
 
 
 .orig x3000
